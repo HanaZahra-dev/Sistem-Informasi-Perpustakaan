@@ -1,134 +1,132 @@
-<h1 align="center">Laravel 8 Perpustakaan</h1>
+# Sistem Informasi Perpustakaan
 
-## Author
+## Deskripsi Project
 
-Laravel 8 pepustakaan dibuat oleh :
+Sistem Informasi Perpustakaan merupakan aplikasi berbasis web yang dibuat untuk membantu proses pengelolaan perpustakaan secara digital. Sistem ini dirancang untuk mempermudah admin dalam mengelola data buku, kategori, penerbit, rak, serta mengelola proses peminjaman dan pengembalian buku.
 
-- Github : <a href="https://github.com/musyahya"> Musyahya </a>
-- Youtube : <a href="https://www.youtube.com/channel/UC1iCvpMssrHnUsWKEe2cOag"> Musyahya </a>
+Aplikasi ini dibuat sebagai project pengembangan sistem informasi dengan menerapkan konsep CRUD (Create, Read, Update, Delete), manajemen database, serta implementasi framework Laravel.
 
-## Fitur 
 
-- Autentikasi Admin, Petugas dan Peminjam
-- CRUD Kategori
-- CRUD Buku
-- CRUD Penerbit
-- CRUD Rak
+## Tujuan Pembuatan
+
+Tujuan dari pembuatan Sistem Informasi Perpustakaan ini yaitu:
+
+- Membantu pengelolaan data perpustakaan agar lebih terstruktur.
+- Mempermudah admin dalam mengelola koleksi buku.
+- Mempermudah proses peminjaman dan pengembalian buku.
+- Mengurangi kesalahan pencatatan data secara manual.
+
+
+## Teknologi yang Digunakan
+
+**Backend**
+- Laravel
+- PHP
+
+**Frontend**
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+
+**Database**
+- MySQL
+
+**Tools**
+- Visual Studio Code
+- XAMPP/Laragon
+- Git & GitHub
+
+
+## Hak Akses Pengguna
+
+### Admin
+Admin memiliki akses untuk:
+- Mengelola data buku
+- Mengelola kategori buku
+- Mengelola data penerbit
+- Mengelola data rak
+- Mengelola data anggota
+- Mengelola data user
+- Mengelola transaksi peminjaman dan pengembalian
+
+### Petugas
+Admin memiliki akses untuk:
+- Mengelola data buku
+- Mengelola kategori buku
+- Mengelola data penerbit
+- Mengelola data rak
+- Mengelola data anggota
+- Mengelola transaksi peminjaman dan pengembalian
+  
+### Peminjam
+Peminjam dapat:
+- Melihat daftar buku
 - Melakukan peminjaman buku
-- Menampilkan chart
-- Mengimplementasikan livewire
-- Menggunakan admin LTE
-- Menggunakan fakerphp
-- Dan lain-lain
-
-## User
-
-**Admin**
-
-- email: admin@gmail.com
-- Password: 123123123
-
-**Petuags**
-
-- email: petugas@gmail.com
-- Password: 123123123
-
-**Peminjam**
-
-- email: peminjam@gmail.com
-- Password: 123123123
-
-## Install
-
-**Clone Repository**
-
-```bash
-git clone https://github.com/musyahya/laravel8_perpustakaan.git
-```
-
-**Download zip**
-
-```bash
-extract file zip
-```
-
-## Buka di kode editor
+- Melihat riwayat peminjaman
 
 
-## Install composer
+## Fitur Utama
 
-```bash
-composer install
-```
+### Manajemen Buku
+- Menampilkan daftar buku
+- Menambah data buku
+- Mengubah data buku
+- Menghapus data buku
 
-## Copy .Env
+### Manajemen Kategori
+- Mengelola kategori buku
 
-```bash
-copy .env.example menjadi .env
-```
+### Manajemen Penerbit
+- Mengelola informasi penerbit buku
 
-## Buka Web Server
+### Manajemen Rak
+- Mengatur lokasi penyimpanan buku berdasarkan rak
 
+### Transaksi Peminjaman
+- Proses peminjaman buku
+- Proses pengembalian buku
+- Perhitungan status peminjaman
 
-## Buat database di localhost 
-
-```bash
-nama database : perpustakaan_laravel_8
-```
-
-## Setting database di .env
-
-```bash
-DB_PORT=3306
-DB_DATABASE=perpustakaan_laravel_8
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-## Generate key
-
-```bash
-php artisan key:generate
-```
-
-## Jalankan migrate dan seeder
-
-```bash
-php artisan migrate --seed
-```
-
-## Buat Storage Link
-
-```bash
-php artisan storage:link
-```
-
-## Download Asset Buku
-
-```bash
-https://drive.google.com/drive/folders/1bCEhRhFVnTiRG9YhibUz2lLwFC6SIFNW?usp=sharing
-```
-
-## Buat Folder buku di public dan copy asetnya
+### Manajemen Pengguna
+- Pengelolaan akun pengguna berdasarkan role
 
 
-## Jalankan Serve
+## Database
 
-```bash
-php artisan serve
-```
+Database yang digunakan memiliki beberapa tabel utama:
 
-## Contributing
+- users
+- anggota
+- buku
+- kategori
+- penerbit
+- rak
+- peminjaman
+- detail_peminjaman
 
-Contributions, issues and feature requests di persilahkan.
-Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Berhubung Project ini saya sudah selesaikan sendiri, namun banyak fitur yang kalian dapat tambahkan silahkan berkontribusi yaa!**
+Relasi antar tabel dibuat untuk mengatur hubungan data buku, pengguna, dan transaksi peminjaman.
 
-## License
 
-- Copyright © 2021 Musyahya.
+## Instalasi dan Menjalankan Project
 
-## buat lupa passowrd (taruh di login.blade.php) dibawah - Remember(ingat saya)- di Style Row Between
-@if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}" class="forgot">Lupa password?</a>
-                @endif
+### 1. Clone Repository
+
+- git clone https://github.com/HanaZahra-dev/Sistem-Informasi-Perpustakaan.git
+- cd Sistem-Informasi-Perpustakaan
+- composer install
+- cp .env.example .env
+- DB_DATABASE=db_perpus_baru
+- DB_USERNAME=root
+- DB_PASSWORD=
+- php artisan migrate
+- php artisan serve
+- http://127.0.0.1:8000
+
+## Lisensi
+Project ini dibuat untuk keperluan pembelajaran, project mata kuliah, dan pengembangan portofolio pribadi.  
+Seluruh kode dalam repository ini dapat digunakan sebagai referensi pembelajaran
+
+### Author
+Hana Rahmaya Zahra
 
